@@ -753,6 +753,13 @@
                     $('#boolrelwidget-boolean-representation').val('');
                     $('#boolrelwidget-boolean-serialization').val('');
                 }
+            },
+            serialize: function() {
+                if (mastergroup != null && mastergroup != 'null') {
+                    return mastergroup.serialize();
+                } else{
+                    return '';
+                }
             }
         };
 
