@@ -2,8 +2,6 @@
 
 ===
 
-# About
-
 Bootstrap & Jquery based boolean query widget, with drag-and-drop and serialization / deserialization.
 
 # Plugin options available
@@ -30,7 +28,6 @@ Bootstrap & Jquery based boolean query widget, with drag-and-drop and serializat
 | Method Call  | Description |
 | ------------- | ------------- |
 | isEmpty()  | Returns the widget fill status  |
-| push(id, question, answer)  | Adds a concept to the widget  |
 | push(id, question, answer)  | Adds a concept to the widget  |
 | pushWithDelegate(id, question, answer, delegate)  | Adds a concept to the widget with a delegate function to handle when the concept is removed(p.e. we could also clean the form field) |
 | splice(id, question, answer) | Removes a concept from the widget |
