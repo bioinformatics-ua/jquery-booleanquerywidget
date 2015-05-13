@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Jquery Boolean Query Widget Example</title>
+        <meta name="description" content="Jquery Boolean Query Widget Example">
+        <meta name="author" content="Ricardo Ribeiro">
+
+
+        <!-- Needed third party libs -->
+        <script src="../vendor/js/jquery-1.9.1.min.js"></script>
+        <script src="../vendor/js/jquery-ui.min.js"></script>
+        <script src="../vendor/js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="../vendor/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../vendor/css/jquery-ui.min.css" />
+        <link rel="stylesheet" href="../jquery.boolrelwidget.css" />
+
+        <script src="../jquery.boolrelwidget.js"></script>
+    </head>
+
+    <body>
+        <form id="form" class="form">
+            <input name="input1" data-question="Question 1" placeholder="Fill to add to boolean plugin" type="text" /><br />
+            <input name="input2" data-question="Question 2" placeholder="Fill to add to boolean plugin" type="text" /><br />
+            <input name="input3" data-question="Question 3" placeholder="Fill to add to boolean plugin" type="text" /><br />
+            <input name="input4" data-question="Question 4" placeholder="Fill to add to boolean plugin" type="text" /><br />
+            <input name="input5" data-question="Question 5" placeholder="Fill to add to boolean plugin" type="text" /><br />
+        </form>
+        <div id="container"></div>
+    </body>
+    <script type="text/javascript">
+        var widget;
+        $(function(){
+            widget = $('#container').boolrelwidget(
+                {
+                    form_anchor: '#form',
+                    //inplace: true
+                }
+            );
+
+            $('#form input').change(function(e){
+                var name = $(this).attr('name');
+                var question = $(this).data('question');
+                var value = $(this).val();
+
+                if(value && value.trim() != ''){
+                    widget.push(name, question, value);
+                } else {
+                    widget.splice(name, question, value);
+                }
+
+            });
+        });
+    </script>
+</html>
+
+
