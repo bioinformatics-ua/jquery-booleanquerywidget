@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery-booleanquerywidget by bioinformatics-ua</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Jquery-booleanquerywidget</h1>
+        <p>It is a jquery plugin to build boolean queries in javascript</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/bioinformatics-ua/jquery-booleanquerywidget" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/bioinformatics-ua/jquery-booleanquerywidget/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/bioinformatics-ua/jquery-booleanquerywidget/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="boolean-query-widget" class="anchor" href="#boolean-query-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Query Widget</h1>
+
+<h1></h1>
+
+<p>Bootstrap &amp; Jquery based boolean query widget, with drag-and-drop and serialization / deserialization.</p>
+
+<h1>
+<a id="plugin-options-available" class="anchor" href="#plugin-options-available" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin options available</h1>
+
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inplace</td>
+<td>Controls the plugin display(in place continuing the page flow, or detached as a popup)</td>
+</tr>
+<tr>
+<td>view_only</td>
+<td>Controls if the widget is read-only or editable (useful to show already serialized data)</td>
+</tr>
+<tr>
+<td>expand_text</td>
+<td>Text to show when the plugin is detached and the popup open in edit mode</td>
+</tr>
+<tr>
+<td>expand_text_read</td>
+<td>Text to show when the plugin is detached and the popup open in read mode</td>
+</tr>
+<tr>
+<td>collapse_text</td>
+<td>Text to show when the plugin is detached and the popup closed in edit mode</td>
+</tr>
+<tr>
+<td>collapse_text_read</td>
+<td>Text to show when the plugin is detached and the popup closed in read mode</td>
+</tr>
+<tr>
+<td>query_text</td>
+<td>Text to show when query is empty</td>
+</tr>
+<tr>
+<td>form_anchor</td>
+<td>Reference to the form that relates to this widget, optional, but if defined allows form submission through the widget</td>
+</tr>
+<tr>
+<td>auto_add</td>
+<td>Controls if there should be an intermediary container for concepts, or they should be added imediately to the query</td>
+</tr>
+<tr>
+<td>default_relation</td>
+<td>The kind of relation to be defined on drag-and-drop concepts by default</td>
+</tr>
+<tr>
+<td>hide_concepts</td>
+<td>Show flat list of concepts above query</td>
+</tr>
+<tr>
+<td>view_serialized_string</td>
+<td>Allows passing an previously serialized query to the widget</td>
+</tr>
+<tr>
+<td>help</td>
+<td>Html content to show on the help menu of the widget</td>
+</tr>
+<tr>
+<td>link_back</td>
+<td>Allows providing a link back inside the widget</td>
+</tr>
+</tbody>
+</table>
+
+<h1>
+<a id="widget-methods" class="anchor" href="#widget-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widget methods</h1>
+
+<table>
+<thead>
+<tr>
+<th>Method Call</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isEmpty()</td>
+<td>Returns the widget fill status</td>
+</tr>
+<tr>
+<td>push(id, question, answer)</td>
+<td>Adds a concept to the widget</td>
+</tr>
+<tr>
+<td>pushWithDelegate(id, question, answer, delegate)</td>
+<td>Adds a concept to the widget with a delegate function to handle when the concept is removed(p.e. we could also clean the form field)</td>
+</tr>
+<tr>
+<td>splice(id, question, answer)</td>
+<td>Removes a concept from the widget</td>
+</tr>
+<tr>
+<td>reset()</td>
+<td>Resets the widget removing all concepts</td>
+</tr>
+<tr>
+<td>serialize()</td>
+<td>Returns a serialized query to be used later on the widget</td>
+</tr>
+</tbody>
+</table>
+
+<h1>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h1>
+
+<p>This a WIP, so not final in any way. There's still no real documentation available.</p>
+
+<p>We make no warranty and cannot be held responsible for any information retrieved and displayed in this catalogue nor by any damage this software my cause.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/bioinformatics-ua">bioinformatics-ua</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
